@@ -1,0 +1,18 @@
+{
+  "dev": {
+    "Environment": "development",
+    "Version": "1.0.0",
+    "Parameters": {
+      "APP_ENV": "development",
+      "REGION": "ap-southeast-1"
+    }
+  },
+  "prod": {
+    "Environment": "production",
+    "Version": "1.0.0",
+    "Parameters": {
+      "APP_ENV": "production",
+      "REGION": "ap-northeast-1"
+    }
+  }
+}

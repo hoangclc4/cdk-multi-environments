@@ -1,0 +1,32 @@
+{
+  "name": "cdk",
+  "version": "0.1.0",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "cdk-synth": "cdk synth ${npm_config_stack} -c config=${npm_config_env} --profile ${npm_config_profile}",
+    "cdk-diff": "cdk diff ${npm_config_stack} -c config=${npm_config_env} --profile ${npm_config_profile} || true",
+    "cdk-deploy": "cdk deploy \"${STACK_NAME}-${npm_config_env}\" -c config=${npm_config_env} --outputs-file ./output/${npm_config_env}.json  --profile ${npm_config_profile}",
+    "cdk-destroy": "cdk destroy ${npm_config_stack} -c config=${npm_config_env} --profile ${npm_config_profile}",
+    "cdk-bootstrap": "cdk bootstrap ${npm_config_stack} -c config=${npm_config_env} --profile ${npm_config_profile}"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.24.1",
+    "@types/jest": "^27.5.0",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.24.1",
+    "constructs": "^10.0.0"
+  }
+}
